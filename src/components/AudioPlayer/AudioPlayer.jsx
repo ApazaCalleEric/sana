@@ -166,9 +166,7 @@ export default function AudioPlayer({ titulo, duracion, transcript, audioSrc, on
         </div>
       </div>
 
-      <p className="text-xs italic" style={{ color: txtSub }}>
-        * Audio ficcionado a partir de experiencias reales, grabado para proteger la identidad.
-      </p>
+
 
       {showTranscript && (
         <div className="mt-3 pt-3" style={{ borderTop: `1px solid ${border}` }}>
