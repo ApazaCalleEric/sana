@@ -46,7 +46,7 @@ export default function MasInformacion({ categoria, onCerrar }) {
             onClick={() => setTabActiva(tab.id)}
             className={`flex-1 flex items-center justify-center gap-1.5 py-3 text-xs font-medium transition-colors ${
               tabActiva === tab.id
-                ? "border-b-2 text-purple-700"
+                ? "border-b-2"
                 : "text-gray-500 hover:text-gray-700"
             }`}
             style={tabActiva === tab.id ? { borderColor: cfg.color, color: cfg.color } : {}}
@@ -108,7 +108,7 @@ export default function MasInformacion({ categoria, onCerrar }) {
             })}
             <Link
               to="/instituciones"
-              className="block text-center text-sm font-medium mt-2 py-2 rounded-xl border-2 border-dashed hover:bg-purple-50 transition-colors"
+              className="block text-center text-sm font-medium mt-2 py-2 rounded-xl border-2 border-dashed transition-colors hover:opacity-80"
               style={{ color: cfg.color, borderColor: cfg.color + "50" }}
             >
               Ver todas las instituciones →

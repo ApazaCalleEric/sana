@@ -147,8 +147,8 @@ export default function Login() {
         </form>
 
         {/* Privacidad */}
-        <div className="mt-6 flex items-start gap-2 bg-purple-50 rounded-2xl px-4 py-3">
-          <Shield size={14} className="text-purple-400 mt-0.5 flex-shrink-0" />
+        <div className="mt-6 flex items-start gap-2 rounded-2xl px-4 py-3" style={{ backgroundColor: "#E7D6D3" }}>
+          <Shield size={14} className="mt-0.5 flex-shrink-0" style={{ color: "#586E7D" }} />
           <p className="text-xs leading-relaxed" style={{ color: "#A7B1B3" }}>
             Tu correo nunca será visible ni compartido. Solo pedimos un nombre ficticio para proteger tu identidad.
           </p>

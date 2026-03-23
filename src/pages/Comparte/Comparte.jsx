@@ -6,9 +6,9 @@ import { enviarTestimonio } from "../../firebase/db";
 import MasInformacion from "../../components/MasInformacion/MasInformacion";
 
 const categorias = [
-  { id: "violencia-sexual", label: "Violencia sexual",        emoji: "🌷" },
-  { id: "aborto",           label: "Decisiones reproductivas", emoji: "🌿" },
-  { id: "embarazo-parto",   label: "Embarazo y parto",         emoji: "🌻" },
+  { id: "violencia-sexual", label: "Violencia sexual" },
+  { id: "aborto",           label: "Decisiones reproductivas" },
+  { id: "embarazo-parto",   label: "Embarazo y parto" },
 ];
 
 // ── Gate de login ─────────────────────────────────────────────────────────────
@@ -33,9 +33,9 @@ function LoginGate() {
       </button>
       <div className="flex justify-center gap-5 flex-wrap mt-6">
         {[
-          { icon: <Shield size={13} className="text-purple-400" />, texto: "Tu identidad no aparece" },
-          { icon: <Lock size={13} className="text-pink-400" />,   texto: "Email privado" },
-          { icon: <Eye size={13} className="text-teal-400" />,    texto: "Revisión ética" },
+          { icon: <Shield size={13} style={{ color: "#A7B1B3" }} />, texto: "Tu identidad no aparece" },
+          { icon: <Lock size={13} style={{ color: "#A7B1B3" }} />,   texto: "Email privado" },
+          { icon: <Eye size={13} style={{ color: "#A7B1B3" }} />,    texto: "Revisión ética" },
         ].map((g) => (
           <div key={g.texto} className="flex items-center gap-1.5 text-xs" style={{ color: "#A7B1B3" }}>
             {g.icon}{g.texto}
@@ -138,8 +138,8 @@ function GrabadorAudio({ onAudioListo }) {
       {estado === "grabando" && (
         <>
           <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto animate-pulse"
-            style={{ backgroundColor: "#fecdd3" }}>
-            <Mic size={28} className="text-rose-500" />
+            style={{ backgroundColor: "#E7D6D3" }}>
+            <Mic size={28} style={{ color: "#586E7D" }} />
           </div>
           <p className="text-2xl font-mono font-bold" style={{ color: "#586E7D" }}>
             {formatTime(segundos)}
@@ -321,9 +321,9 @@ export default function Comparte() {
       {/* Garantías */}
       <div className="flex justify-center gap-6 mb-8 flex-wrap">
         {[
-          { icon: <Shield size={13} className="text-purple-400" />, texto: "Sin datos personales" },
-          { icon: <Lock size={13} className="text-pink-400" />,     texto: "Revisión humana" },
-          { icon: <Eye size={13} className="text-teal-400" />,      texto: "Ética en cada paso" },
+          { icon: <Shield size={13} style={{ color: "#A7B1B3" }} />, texto: "Sin datos personales" },
+          { icon: <Lock size={13} style={{ color: "#A7B1B3" }} />,   texto: "Revisión humana" },
+          { icon: <Eye size={13} style={{ color: "#A7B1B3" }} />,    texto: "Ética en cada paso" },
         ].map((g) => (
           <div key={g.texto} className="flex items-center gap-1.5 text-xs" style={{ color: "#A7B1B3" }}>
             {g.icon}{g.texto}
@@ -365,7 +365,6 @@ export default function Comparte() {
                 }
               >
                 <input type="radio" name="categoria" value={c.id} checked={form.categoria === c.id} onChange={handleChange} className="hidden" />
-                <span>{c.emoji}</span>
                 {c.label}
               </label>
             ))}
@@ -416,8 +415,8 @@ export default function Comparte() {
           </label>
           <div className="flex rounded-2xl overflow-hidden border mb-4" style={{ borderColor: "#E7D6D3" }}>
             {[
-              { id: "texto", label: "📝 Por escrito" },
-              { id: "audio", label: "🎙 Grabando mi voz" },
+              { id: "texto", label: "Por escrito" },
+              { id: "audio", label: "Grabando mi voz" },
             ].map((t) => (
               <button
                 key={t.id}
@@ -462,7 +461,7 @@ export default function Comparte() {
             <label key={c.name} className="flex items-start gap-3 cursor-pointer">
               <input
                 type="checkbox" name={c.name} checked={form[c.name]} onChange={handleChange}
-                className="mt-1 accent-purple-500"
+                className="mt-1" style={{ accentColor: "#586E7D" }}
               />
               <span className="text-sm leading-relaxed" style={{ color: "#A7B1B3" }}>{c.text}</span>
             </label>

@@ -157,7 +157,7 @@ export default function Testimonios() {
           className="flex items-center gap-1.5 px-4 py-1.5 rounded-full text-sm font-semibold transition-all hover:scale-105 shadow"
           style={{ backgroundColor: "#E7D6D3", color: "#586E7D", border: "1px solid rgba(255,255,255,0.5)" }}
         >
-          🌸 Comparte tu historia
+          Comparte tu historia
         </Link>
       </div>
 

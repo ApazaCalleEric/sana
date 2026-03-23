@@ -26,7 +26,8 @@ export default function ContentWarning({ onAccept, onDecline }) {
         <div className="flex flex-col gap-3">
           <button
             onClick={onAccept}
-            className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-3 rounded-xl font-medium hover:opacity-90 transition-opacity"
+            className="w-full py-3 rounded-xl font-medium hover:opacity-90 transition-opacity"
+            style={{ backgroundColor: "#586E7D", color: "#F9F9F9" }}
           >
             Quiero continuar
           </button>

@@ -158,19 +158,16 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
             {[
-              { emoji: "🎙️", titulo: "Historias reales",  desc: "Testimonios narrados en primera persona. Escucha, pausa, vuelve cuando quieras.", link: "/testimonios",  linkLabel: "Escuchar" },
-              { emoji: "💬", titulo: "Habla sin miedo",   desc: "Un chatbot empático que responde tus preguntas sin juzgarte.",                   link: "/chat",         linkLabel: "Ir al chat" },
-              { emoji: "📖", titulo: "Información clara", desc: "Microcontenidos sobre derechos, salud y rutas de acción. En lenguaje simple.",   link: "/informacion",  linkLabel: "Ver información" },
-              { emoji: "📍", titulo: "Dónde acudir",      desc: "Instituciones y organizaciones en Bolivia que pueden acompañarte.",              link: "/instituciones", linkLabel: "Ver recursos" },
+              { titulo: "Historias reales",  desc: "Testimonios narrados en primera persona. Escucha, pausa, vuelve cuando quieras.", link: "/testimonios",  linkLabel: "Escuchar" },
+              { titulo: "Habla sin miedo",   desc: "Un chatbot empático que responde tus preguntas sin juzgarte.",                   link: "/chat",         linkLabel: "Ir al chat" },
+              { titulo: "Información clara", desc: "Microcontenidos sobre derechos, salud y rutas de acción. En lenguaje simple.",   link: "/informacion",  linkLabel: "Ver información" },
+              { titulo: "Dónde acudir",      desc: "Instituciones y organizaciones en Bolivia que pueden acompañarte.",              link: "/instituciones", linkLabel: "Ver recursos" },
             ].map((card, i) => (
               <div
                 key={card.titulo}
                 className="animate-fade-in-up bg-white rounded-3xl p-6 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 group"
                 style={{ border: "1px solid #E7D6D3", animationDelay: `${i * 80}ms` }}
               >
-                <div className="w-12 h-12 rounded-2xl flex items-center justify-center mb-4 text-2xl group-hover:scale-110 transition-transform duration-300" style={{ backgroundColor: "#F9F9F9" }}>
-                  {card.emoji}
-                </div>
                 <h3 className="font-semibold mb-2 text-sm" style={{ color: "#586E7D" }}>{card.titulo}</h3>
                 <p className="text-xs leading-relaxed mb-4" style={{ color: "#A7B1B3" }}>{card.desc}</p>
                 <Link
