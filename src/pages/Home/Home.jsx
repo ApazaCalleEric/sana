@@ -126,6 +126,7 @@ export default function Home() {
             { n: "3",    label: "Temáticas" },
             { n: "100%", label: "Anónimo" },
             { n: "24/7", label: "Disponible" },
+            { n: "55", label: "Visitas" },
           ].map((s) => (
             <div key={s.label} className="text-center text-white">
               <div className="text-2xl font-bold">{s.n}</div>
