@@ -121,7 +121,7 @@ export default function Home() {
         </div>
 
         {/* Stats */}
-        <div className="animate-fade-in-up delay-400 mt-14 flex justify-center gap-10">
+        <div className="animate-fade-in-up delay-400 mt-14 flex justify-center flex-wrap gap-6 px-4">
           {[
             { n: "3",    label: "Temáticas" },
             { n: "100%", label: "Anónimo" },

@@ -162,12 +162,9 @@ export default function Testimonios() {
       </div>
 
       {/* ── Contenido principal: gif + panel derecho ── */}
-      <div
-        className="relative z-10 flex items-start justify-center gap-8 px-6 pb-10"
-        style={{ flexWrap: "nowrap" }}
-      >
+      <div className="relative z-10 flex flex-col md:flex-row items-center md:items-start justify-center gap-6 px-4 pb-10">
         {/* GIF chica */}
-        <div className="relative flex-shrink-0" style={{ width: "min(640px, 55vw)" }}>
+        <div className="relative flex-shrink-0" style={{ width: "min(640px, min(55vw, 92vw))" }}>
           <img
             src="/images/chica%20animacion.gif"
             alt="Chica SANA"
@@ -209,10 +206,11 @@ export default function Testimonios() {
         {/* Panel derecho: reproductor + comentarios */}
         <div
           style={{
-            width: selected ? "min(420px, 40vw)" : 0,
+            width: selected ? "min(420px, 92vw)" : 0,
+            maxHeight: selected ? "2000px" : 0,
             opacity: selected ? 1 : 0,
             overflow: "hidden",
-            transition: "width 0.55s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease 0.15s",
+            transition: "width 0.55s cubic-bezier(0.4, 0, 0.2, 1), max-height 0.55s ease, opacity 0.4s ease 0.15s",
             flexShrink: 0,
           }}
         >
